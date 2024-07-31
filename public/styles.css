@@ -1,0 +1,75 @@
+/* Define o background para todo o body */
+body {
+  background-image: url("fundo1.jpg");
+  background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  margin: 0;
+  padding: 0;
+  color: #000000; /* Cor do texto */
+}
+
+/* Centraliza o conteúdo da página */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Estilo da caixa de login com fundo branco */
+.login-box {
+  background: #ffffff; /* Fundo branco */
+  padding: 20px;
+  border-radius: 12px; /* Bordas arredondadas */
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo da logo */
+.logo {
+  width: 120px; /* Largura da logo */
+  margin-bottom: 20px; /* Espaço abaixo da logo */
+}
+
+/* Estilo dos campos de entrada */
+.textbox {
+  margin: 15px 0;
+}
+
+.textbox label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #6200ea; /* Cor roxa para os labels */
+}
+
+.textbox input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd; /* Borda leve */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-sizing: border-box; /* Inclui padding e border no tamanho total */
+  font-size: 16px; /* Fonte maior para melhor legibilidade */
+  background: #ffffff; /* Fundo branco para os inputs */
+}
+
+/* Estilo do botão */
+.btn {
+  background-color: #6200ea; /* Cor roxa do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px; /* Bordas arredondadas */
+  cursor: pointer;
+  font-size: 16px; /* Fonte maior para melhor legibilidade */
+  transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+.btn:hover {
+  background-color: #3700b3; /* Cor do botão ao passar o mouse */
+}

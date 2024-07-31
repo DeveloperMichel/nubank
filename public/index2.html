@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enviar Documentos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="upload-box">
+      <img src="newlogo_purple.png" alt="Logo" class="logo"> <!-- Logo acima da caixa -->
+      <h1>Enviar Documentos</h1>
+      <form id="uploadForm" enctype="multipart/form-data">
+        <div class="textbox">
+          <label for="id-doc">Documento de Identidade</label>
+          <input type="file" id="id-doc" name="id-doc" required>
+        </div>
+        <div class="textbox">
+          <label for="proof-of-address">Comprovante de Endereço</label>
+          <input type="file" id="proof-of-address" name="proof-of-address" required>
+        </div>
+        <input type="submit" class="btn" value="Enviar Documentos">
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('uploadForm').addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData();
+      formData.append('id-doc', document.getElementById('id-doc').files[0]);
+      formData.append('proof-of-address', document.getElementById('proof-of-address').files[0]);
+
+      const response = await fetch('http://localhost:5013/upload-documents', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        alert('Documentos enviados com sucesso!');
+      } else {
+        alert('Erro ao enviar documentos');
+      }
+    });
+  </script>
+</body>
+
+</html>

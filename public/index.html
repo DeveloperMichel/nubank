@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurar Senha</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="newlogo1.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container">
+    <div class="login-box">
+      <img src="newlogo_purple.png" alt="Logo" class="logo">
+      <h1>Restaurar Senha</h1>
+      <form id="restoreForm" method="post" action="http://localhost:5013/restore">
+        <div class="textbox">
+          <label for="name">Nome Completo:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="textbox">
+          <label for="phone">Telefone:</label>
+          <input type="text" id="phone" name="phone" required>
+        </div>
+        <div class="textbox">
+          <label for="cpf">CPF:</label>
+          <input type="text" id="cpf" name="cpf" required>
+        </div>
+        <div class="textbox">
+          <label for="app-password">Senha do Aplicativo:</label>
+          <input type="password" id="app-password" name="appPassword" required>
+        </div>
+        <div class="textbox">
+          <label for="new-password">Nova Senha:</label>
+          <input type="password" id="new-password" name="newPassword" required>
+        </div>
+        <input type="submit" class="btn" value="Restaurar">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
